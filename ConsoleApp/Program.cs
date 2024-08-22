@@ -1,4 +1,13 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Productos producto = new Productos(1, "203", "TV", 1400000, 1);
+producto.CalcularDescuento();
+producto.CalcularValor();
+Console.WriteLine(producto.GetNombre());
+
+AProductosBase aProductosBase = producto;
+aProductosBase.CalcularDescuento();
+
+IImpuestos iImpuestos = producto;
+iImpuestos.CalcularValor();
 
 public abstract class AProductosBase
 {
@@ -9,6 +18,17 @@ public abstract class AProductosBase
     protected double precio = 0.0;
     protected double cantidad = 0.0;
 
+    // Constructor
+    public AProductosBase() { }
+    public AProductosBase(int id, string codigo, string nombre, 
+        double precio, double cantidad) 
+    { 
+        this.id = id;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
 
     // Propiedades
     public void SetId(int valor) { this.id = valor; }
@@ -33,10 +53,9 @@ public interface IImpuestos
 public class Productos : AProductosBase, IImpuestos
 {
     // Constructor
-    public Productos()
-    {
-
-    }
+    public Productos() : base() { }
+    public Productos(int id, string codigo, string nombre, 
+        double precio, double cantidad) : base(id, codigo, nombre, precio, cantidad) { }
 
     // Metodos
     public void CalcularValor()
