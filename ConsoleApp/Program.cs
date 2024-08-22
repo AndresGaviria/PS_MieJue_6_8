@@ -4,9 +4,13 @@ producto.CalcularValor();
 Console.WriteLine(producto.GetNombre());
 
 AProductosBase aProductosBase = producto;
+AProductosBase aProductosBase2 = new Productos(1, "203", "TV", 1400000, 1);
+AProductosBase aProductosBase3 = (AProductosBase)(producto);
 aProductosBase.CalcularDescuento();
 
 IImpuestos iImpuestos = producto;
+IImpuestos iImpuestos2 = new Productos(1, "203", "TV", 1400000, 1);
+IImpuestos iImpuestos3 = (IImpuestos)(producto);
 iImpuestos.CalcularValor();
 
 public abstract class AProductosBase
