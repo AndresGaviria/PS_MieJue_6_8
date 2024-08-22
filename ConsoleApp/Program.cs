@@ -1,4 +1,17 @@
-﻿Productos producto = new Productos(1, "203", "TV", 1400000, 1);
+﻿using ConsoleApp.Definicion;
+using ConsoleApp.Entidades;
+
+var clases = new Clases();
+clases.Ejecutar();
+
+var modelo = new Modelos();
+modelo.Ejecutar();
+
+var modeloComplejo = new ModeloComplejo();
+modeloComplejo.Ejecutar();
+
+
+Productos producto = new Productos(1, "203", "TV", 1400000, 1);
 producto.CalcularDescuento();
 producto.CalcularValor();
 Console.WriteLine(producto.GetNombre());
