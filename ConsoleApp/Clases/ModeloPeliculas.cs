@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp.AlquilerPeliculas
+namespace ConsoleApp.Clases.AlquilerPeliculas
 {
     public class Personas
     {
@@ -17,11 +17,9 @@ namespace ConsoleApp.AlquilerPeliculas
     {
         private int id = 0;
         private string nombre = "";
-        private string genero = "";
 
         public int Id { get => this.id; set => this.id = value; }
         public string Nombre { get => this.nombre; set => this.nombre = value; }
-        public string Genero { get => this.genero; set => this.genero = value; }
     }
 
     public class Estados

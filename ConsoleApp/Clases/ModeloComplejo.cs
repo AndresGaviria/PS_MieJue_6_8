@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp.Entidades
+namespace ConsoleApp.Clases.Entidades
 {
     public class ModeloComplejo
     {        
@@ -250,7 +250,7 @@ namespace ConsoleApp.Entidades
 
     public class MetodoDePagos
     {
-        public enum TipodePagos { EFECTIVO = 20, TARJETA = 1 }
+        public enum TipodePagos { EFECTIVO = 0, TARJETA = 1 }
 
         private int id = 0;
         private string nombre = "";
