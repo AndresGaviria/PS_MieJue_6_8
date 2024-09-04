@@ -13,4 +13,4 @@ modeloComplejo.Ejecutar();
 */
 
 var conexion = new ConexionBasica();
-conexion.ObtenerTests();
+conexion.ObtenerPeliculas();
