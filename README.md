@@ -7,7 +7,7 @@
 - git commit -am "Descripcion"
 - git push
 
-git checkout -- .
+- git checkout -- .
 
 # Commandos dotnet 
 - dotnet run
