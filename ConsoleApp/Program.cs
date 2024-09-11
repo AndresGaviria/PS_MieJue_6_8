@@ -11,8 +11,12 @@ modelo.Ejecutar();
 
 var modeloComplejo = new ModeloComplejo();
 modeloComplejo.Ejecutar();
-*/
 
 var conexion = new ConexionBasica();
 conexion.NonQueryPeliculas();
 conexion.ObtenerPeliculas_Procedimiento();
+*/
+
+var conexionEF = new ConexionEF();
+conexionEF.NonQueryPeliculas();
+conexionEF.ObtenerPeliculas();
