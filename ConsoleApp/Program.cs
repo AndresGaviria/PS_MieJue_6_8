@@ -18,5 +18,5 @@ conexion.ObtenerPeliculas_Procedimiento();
 */
 
 var conexionEF = new ConexionEF();
-conexionEF.NonQueryPeliculas();
+//conexionEF.NonQueryPeliculas();
 conexionEF.ObtenerPeliculas();
